@@ -31,7 +31,7 @@ public class Display
         {
             if (value.HasValue && (value < MinSizeInches || value > MaxSizeInches))
             {
-                throw new ArgumentOutOfRangeException("Otillåten skärmstorlek!")
+                throw new ArgumentOutOfRangeException("Otillåten skärmstorlek!");
             }
             sizeInches = value;
         }

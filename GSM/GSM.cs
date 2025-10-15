@@ -8,6 +8,9 @@ namespace GSM;
 public class GSM
 {
     // Privata konstanter
+    private static readonly GSM iphone10 = new GSM("Iphone 10", "Apple", "M-Tel", 9999.99m,
+        new Display(7, 25_000), new Battery(Battery.Type.LiIon, 250, 1000));
+
     private const uint MaxPriceValue = 1_000_000;
 
     // Private Fields
@@ -29,9 +32,11 @@ public class GSM
         Price = price;
         Display = display;
         Battery = battery;
+        CallHistory = new CallHistory();
     }
 
     // Egenskaper
+    public static GSM Iphone10 { get { return iphone10; } }
     public string Model
     {
         get { return model; }
@@ -87,6 +92,8 @@ public class GSM
         get { return battery; }
         set { battery = value; }
     }
+
+    public CallHistory CallHistory { get; set; }
 
     // Metoder
     public void ShowInformation()

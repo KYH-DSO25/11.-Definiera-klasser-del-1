@@ -23,3 +23,10 @@
  *      hantera information om iPhone 10
  */
 
+using GSM;
+
+GSM_Test.TestRunner();
+
+
+Console.Write("Tryck på en tangent för att stänga fönstret...");
+Console.ReadKey();
